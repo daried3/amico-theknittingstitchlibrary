@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>amico stitch library — 編み図記号辞書</title>
+  <meta name="description" content="世界の手芸をつなぐ編み図記号辞書。日本語・English・한국어 三言語対応。">
+  <meta name="theme-color" content="#7DB8A8">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="amico stitch library">
+  <meta property="og:description" content="世界の手芸をつなぐ編み図記号辞書">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" role="banner" tabindex="0">
+        <span class="logo-name">amico <span class="logo-dot">•</span></span>
+        <span class="logo-subtitle">the knitting stitch library</span>
+      </div>
+
+      <nav class="lang-switcher" aria-label="言語切り替え">
+        <button class="lang-btn active" data-lang="ja" aria-label="日本語">日本語</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">English</button>
+        <button class="lang-btn" data-lang="ko" aria-label="한국어">한국어</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Main ── -->
+  <main class="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero-title" id="hero-title">編み図記号辞書</h1>
+      <p class="hero-desc" id="hero-desc">
+        記号の「なぜ？」に静かに答える場所。日本語・英語・韓国語で検索できます。
+      </p>
+
+      <!-- Search -->
+      <div class="search-wrap">
+        <div class="search-input-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            id="search-input"
+            type="search"
+            class="search-input"
+            placeholder="記号を検索… 例: M1R、掛け目、Knit"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="記号を検索"
+          >
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs" role="group" aria-label="カテゴリーフィルター">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="basic">基本</button>
+        <button class="filter-btn" data-filter="increase">増し目</button>
+        <button class="filter-btn" data-filter="decrease">減らし目</button>
+        <button class="filter-btn" data-filter="other">その他</button>
+      </div>
+    </section>
+
+    <!-- Symbol list (rendered by JS) -->
+    <div id="symbol-list" role="list" aria-live="polite"></div>
+
+  </main>
+
+  <!-- ── Modal ── -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal" class="modal"></div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="footer-logo">amico <span class="logo-dot">•</span></div>
+    <p>世界の手芸をつなぐ</p>
+    <p style="margin-top:6px">© 2026 amico stitch library</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
